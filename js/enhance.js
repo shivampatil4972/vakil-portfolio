@@ -89,63 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
     dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
   }
 
-  /* ── Enhanced Booking Form with Toast ───────────────────── */
-  var bookingForm = document.getElementById('booking-form');
-  if (bookingForm) {
-    // Remove any previous submit listener by cloning
-    var newForm = bookingForm.cloneNode(true);
-    bookingForm.parentNode.replaceChild(newForm, bookingForm);
 
-    newForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      var form = this;
-      var btn  = form.querySelector('.form-submit');
-      var origHTML = btn.innerHTML;
-
-      // HTML5 validation
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        window.showToast('Please fill in all required fields.', 'error');
-        return;
-      }
-
-      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i>&nbsp;Sending…';
-      btn.disabled = true;
-
-      var templateParams = {
-        from_name  : form.full_name.value,
-        from_email : form.email.value,
-        from_phone : form.phone.value,
-        case_type  : form.case_type.value,
-        appt_date  : form.appt_date.value,
-        appt_time  : form.appt_time.value,
-        message    : form.message.value
-      };
-
-      function onSuccess() {
-        btn.innerHTML = origHTML;
-        btn.disabled = false;
-        window.showToast('✓ Consultation booked! We will confirm within 2 hours.', 'success', 6000);
-        form.reset();
-        // Re-apply min date after reset
-        var di = form.querySelector('#appt_date');
-        if (di) di.setAttribute('min', new Date().toISOString().split('T')[0]);
-      }
-      function onError() {
-        btn.innerHTML = origHTML;
-        btn.disabled = false;
-        window.showToast('Send failed. Please call +91 98765 43210 directly.', 'error');
-      }
-
-      if (typeof emailjs !== 'undefined') {
-        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
-          .then(onSuccess).catch(onError);
-      } else {
-        // Demo mode — simulate success
-        setTimeout(onSuccess, 1600);
-      }
-    });
-  }
 
   /* ── Intersection Observer: section .in-view ─────────────── */
   if ('IntersectionObserver' in window) {

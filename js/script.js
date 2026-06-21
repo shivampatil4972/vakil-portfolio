@@ -473,17 +473,29 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.textContent = 'Book Consultation';
       btn.disabled = false;
       if (data.success) {
-        if (successEl) { successEl.style.display = 'block'; }
+        if (window.showToast) {
+          window.showToast('✓ Consultation booked! We will confirm within 2 hours.', 'success', 6000);
+        } else if (successEl) { 
+          successEl.style.display = 'block'; 
+          setTimeout(() => { successEl.style.display = 'none'; }, 5000);
+        }
         this.reset();
-        setTimeout(() => { if (successEl) successEl.style.display = 'none'; }, 5000);
       } else {
-        alert('There was an error sending your message. Please try calling us directly.');
+        if (window.showToast) {
+          window.showToast('Send failed. Please try again or contact us directly.', 'error');
+        } else {
+          alert('There was an error sending your message. Please try calling us directly.');
+        }
       }
     })
     .catch(error => {
       btn.textContent = 'Book Consultation';
       btn.disabled = false;
-      alert('There was an error sending your message. Please try calling us directly.');
+      if (window.showToast) {
+        window.showToast('Send failed. Please try again or contact us directly.', 'error');
+      } else {
+        alert('There was an error sending your message. Please try calling us directly.');
+      }
     });
   });
 
