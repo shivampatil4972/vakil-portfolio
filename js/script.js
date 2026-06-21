@@ -18,7 +18,7 @@ const translations = {
     heroName:'Adv.Ashwanith Chelekar(Nana)',
     heroDesig:'Senior Advocate | Bombay High Court',
     heroTagline:'Justice Delivered with Integrity & Expertise',
-    heroDesc:'With 15+ years of distinguished legal practice, I provide strategic, compassionate, and result-oriented legal representation across civil, criminal, and corporate matters.',
+    heroDesc:'With 4+ years of distinguished legal practice, I provide strategic, compassionate, and result-oriented legal representation across civil, criminal, and corporate matters.',
     heroCTA1:'Book Consultation', heroCTA2:'Download Profile',
     /* Stats */
     stat1:'Years Experience', stat2:'Cases Handled', stat3:'Clients Served', stat4:'Client Satisfaction',
@@ -37,7 +37,7 @@ const translations = {
     lblBooking:'Book Appointment', titleBooking:'Schedule a Consultation',
     lblContact:'Contact', titleContact:'Get in Touch',
     /* About */
-    aboutP1:'With over 15 years of dedicated practice at the Bombay High Court, I have built a reputation for delivering justice with integrity, diligence, and uncompromising ethics.',
+    aboutP1:'With over 4 years of dedicated practice at the Bombay High Court, I have built a reputation for delivering justice with integrity, diligence, and uncompromising ethics.',
     aboutP2:'My practice spans criminal defence, civil litigation, family law, corporate advisory, and real estate matters — always keeping the client\'s best interest at the forefront.',
     /* Process steps */
     proc1:'Book Appointment', proc2:'Case Discussion', proc3:'Legal Strategy', proc4:'Active Representation', proc5:'Resolution',
@@ -69,7 +69,7 @@ const translations = {
     heroName:'अॅड. अश्वनीथ चेलेकर (नाना)',
     heroDesig:'वरिष्ठ अधिवक्ता | मुंबई उच्च न्यायालय',
     heroTagline:'प्रामाणिकता व कौशल्याने न्याय',
-    heroDesc:'१५+ वर्षांच्या कायदेशीर सरावाने मी नागरी, फौजदारी व कॉर्पोरेट प्रकरणांमध्ये धोरणात्मक आणि परिणाम-केंद्रित कायदेशीर सेवा देतो.',
+    heroDesc:'४+ वर्षांच्या कायदेशीर सरावाने मी नागरी, फौजदारी व कॉर्पोरेट प्रकरणांमध्ये धोरणात्मक आणि परिणाम-केंद्रित कायदेशीर सेवा देतो.',
     heroCTA1:'सल्लामसलत बुक करा', heroCTA2:'प्रोफाइल डाउनलोड करा',
     /* Stats */
     stat1:'वर्षांचा अनुभव', stat2:'प्रकरणे हाताळली', stat3:'सेवा दिलेले ग्राहक', stat4:'ग्राहक समाधान',
@@ -88,7 +88,7 @@ const translations = {
     lblBooking:'भेट बुक करा', titleBooking:'सल्लामसलत शेड्युल करा',
     lblContact:'संपर्क', titleContact:'संपर्क साधा',
     /* About */
-    aboutP1:'मुंबई उच्च न्यायालयात १५+ वर्षांच्या समर्पित सरावाने मी प्रामाणिकता, परिश्रम आणि नैतिकतेने न्याय देण्याची प्रतिष्ठा मिळवली आहे.',
+    aboutP1:'मुंबई उच्च न्यायालयात ४+ वर्षांच्या समर्पित सरावाने मी प्रामाणिकता, परिश्रम आणि नैतिकतेने न्याय देण्याची प्रतिष्ठा मिळवली आहे.',
     aboutP2:'माझा सराव फौजदारी बचाव, नागरी खटले, कौटुंबिक कायदा, कॉर्पोरेट सल्ला आणि स्थावर मालमत्ता प्रकरणांमध्ये आहे — नेहमी ग्राहकाचे हित सर्वोपरि ठेवून.',
     /* Process steps */
     proc1:'भेट बुक करा', proc2:'प्रकरण चर्चा', proc3:'कायदेशीर धोरण', proc4:'सक्रिय प्रतिनिधित्व', proc5:'निराकरण',
@@ -120,7 +120,7 @@ const translations = {
     heroName:'अधिवक्ता अश्वनीथ चेलेकर (नाना)',
     heroDesig:'वरिष्ठ अधिवक्ता | बॉम्बे हाईकोर्ट',
     heroTagline:'सत्यनिष्ठा और विशेषज्ञता के साथ न्याय',
-    heroDesc:'१५+ वर्षों के कानूनी अनुभव के साथ, मैं नागरिक, आपराधिक और कॉर्पोरेट मामलों में रणनीतिक और परिणाम-उन्मुख कानूनी प्रतिनिधित्व प्रदान करता हूँ।',
+    heroDesc:'४+ वर्षों के कानूनी अनुभव के साथ, मैं नागरिक, आपराधिक और कॉर्पोरेट मामलों में रणनीतिक और परिणाम-उन्मुख कानूनी प्रतिनिधित्व प्रदान करता हूँ।',
     heroCTA1:'परामर्श बुक करें', heroCTA2:'प्रोफाइल डाउनलोड करें',
     /* Stats */
     stat1:'वर्षों का अनुभव', stat2:'मामले सुलझाए', stat3:'संतुष्ट ग्राहक', stat4:'ग्राहक संतुष्टि',
@@ -139,7 +139,7 @@ const translations = {
     lblBooking:'अपॉइंटमेंट बुक करें', titleBooking:'परामर्श के लिए समय तय करें',
     lblContact:'संपर्क', titleContact:'हमसे संपर्क करें',
     /* About */
-    aboutP1:'बॉम्बे हाईकोर्ट में १५+ वर्षों के समर्पित अभ्यास के साथ, मैंने सत्यनिष्ठा, परिश्रम और नैतिकता के साथ न्याय दिलाने की प्रतिष्ठा बनाई है।',
+    aboutP1:'बॉम्बे हाईकोर्ट में ४+ वर्षों के समर्पित अभ्यास के साथ, मैंने सत्यनिष्ठा, परिश्रम और नैतिकता के साथ न्याय दिलाने की प्रतिष्ठा बनाई है।',
     aboutP2:'मेरा अभ्यास आपराधिक बचाव, नागरिक मुकदमेबाजी, पारिवारिक कानून, कॉर्पोरेट सलाह और रियल एस्टेट मामलों में है — हमेशा ग्राहक के हित को सर्वोपरि रखते हुए।',
     /* Process steps */
     proc1:'अपॉइंटमेंट बुक करें', proc2:'मामले पर चर्चा', proc3:'कानूनी रणनीति', proc4:'सक्रिय प्रतिनिधित्व', proc5:'समाधान',
