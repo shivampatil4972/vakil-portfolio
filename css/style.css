@@ -75,30 +75,6 @@ a  { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 button { cursor: pointer; border: none; outline: none; background: none; }
 
-/* ── Custom Cursor ────────────────────────────────────────── */
-.cursor-dot {
-  position: fixed; top: 0; left: 0; z-index: 99999;
-  width: 8px; height: 8px; border-radius: 50%;
-  background: var(--accent);
-  pointer-events: none;
-  transform: translate(-50%,-50%);
-  transition: transform .1s ease, opacity .2s ease;
-  will-change: transform;
-}
-.cursor-ring {
-  position: fixed; top: 0; left: 0; z-index: 99998;
-  width: 36px; height: 36px; border-radius: 50%;
-  border: 2px solid rgba(212,175,55,.5);
-  pointer-events: none;
-  transform: translate(-50%,-50%);
-  transition: transform .15s ease, width .3s ease, height .3s ease, border-color .3s ease;
-  will-change: transform;
-}
-.cursor-ring.hovering {
-  width: 60px; height: 60px;
-  border-color: var(--accent);
-  background: rgba(212,175,55,.06);
-}
 
 /* ── Scroll Progress ──────────────────────────────────────── */
 #scroll-progress {

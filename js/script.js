@@ -131,28 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initGSAP();
   }, 2200);
 
-  /* ── Custom Cursor ────────────────────────────────────────── */
-  const dot  = document.querySelector('.cursor-dot');
-  const ring = document.querySelector('.cursor-ring');
-  let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
-
-  document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
-
-  function animateCursor() {
-    if (dot)  { dot.style.left = mouseX + 'px'; dot.style.top = mouseY + 'px'; }
-    if (ring) {
-      ringX += (mouseX - ringX) * 0.12;
-      ringY += (mouseY - ringY) * 0.12;
-      ring.style.left = ringX + 'px'; ring.style.top  = ringY + 'px';
-    }
-    requestAnimationFrame(animateCursor);
-  }
-  animateCursor();
-
-  document.querySelectorAll('a, button, [role="button"], .practice-card, .gallery-item, .faq-question, .filter-tab, .chat-suggestion').forEach(el => {
-    el.addEventListener('mouseenter', () => ring && ring.classList.add('hovering'));
-    el.addEventListener('mouseleave', () => ring && ring.classList.remove('hovering'));
-  });
 
   /* ── Scroll Progress ──────────────────────────────────────── */
   const progressBar = document.getElementById('scroll-progress');
