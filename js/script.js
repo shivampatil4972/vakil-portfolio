@@ -460,41 +460,31 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.textContent = 'Sending…';
     btn.disabled = true;
 
-    const templateParams = {
-      from_name  : this.full_name.value,
-      from_email : this.email.value,
-      from_phone : this.phone.value,
-      case_type  : this.case_type.value,
-      appt_date  : this.appt_date.value,
-      appt_time  : this.appt_time.value,
-      message    : this.message.value,
-    };
+    const formData = new FormData(this);
+    formData.append("access_key", "3298fb84-c8f8-4bf8-b868-f801847a0828");
+    formData.append("subject", "New Consultation Request: " + this.full_name.value);
 
-    // Replace with your EmailJS service/template IDs
-    if (typeof emailjs !== 'undefined') {
-      emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
-        .then(() => {
-          btn.textContent = 'Book Consultation';
-          btn.disabled = false;
-          if (successEl) { successEl.style.display = 'block'; }
-          this.reset();
-          setTimeout(() => { if (successEl) successEl.style.display = 'none'; }, 5000);
-        })
-        .catch(() => {
-          btn.textContent = 'Book Consultation';
-          btn.disabled = false;
-          alert('There was an error sending your message. Please try calling us directly.');
-        });
-    } else {
-      // Fallback demo
-      setTimeout(() => {
-        btn.textContent = 'Book Consultation';
-        btn.disabled = false;
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      btn.textContent = 'Book Consultation';
+      btn.disabled = false;
+      if (data.success) {
         if (successEl) { successEl.style.display = 'block'; }
         this.reset();
         setTimeout(() => { if (successEl) successEl.style.display = 'none'; }, 5000);
-      }, 1500);
-    }
+      } else {
+        alert('There was an error sending your message. Please try calling us directly.');
+      }
+    })
+    .catch(error => {
+      btn.textContent = 'Book Consultation';
+      btn.disabled = false;
+      alert('There was an error sending your message. Please try calling us directly.');
+    });
   });
 
   /* ── Smooth Scroll for Nav Links ──────────────────────────── */
