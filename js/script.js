@@ -108,6 +108,57 @@ const translations = {
     /* Booking */
     bookSubtitle:'आज आपली सल्लामसलत शेड्युल करा. फॉर्म भरा आणि आम्ही २ तासांत पुष्टी करू.',
     bookSubmit:'माझी सल्लामसलत बुक करा',
+  },
+  hi: {
+    /* Nav */
+    navHome:'मुख्य पृष्ठ', navAbout:'मेरे बारे में', navPractice:'सेवा क्षेत्र',
+    navExperience:'अनुभव', navCases:'सफलता की कहानियाँ',
+    navTestimonials:'प्रशंसापत्र', navBlog:'ब्लॉग', navContact:'संपर्क',
+    navCTA:'परामर्श बुक करें',
+    /* Hero */
+    heroLabel:'नए मामलों के लिए उपलब्ध',
+    heroName:'अधिवक्ता अश्वनीथ चेलेकर',
+    heroDesig:'वरिष्ठ अधिवक्ता | बॉम्बे हाईकोर्ट',
+    heroTagline:'सत्यनिष्ठा और विशेषज्ञता के साथ न्याय',
+    heroDesc:'१५+ वर्षों के कानूनी अनुभव के साथ, मैं नागरिक, आपराधिक और कॉर्पोरेट मामलों में रणनीतिक और परिणाम-उन्मुख कानूनी प्रतिनिधित्व प्रदान करता हूँ।',
+    heroCTA1:'परामर्श बुक करें', heroCTA2:'प्रोफाइल डाउनलोड करें',
+    /* Stats */
+    stat1:'वर्षों का अनुभव', stat2:'मामले सुलझाए', stat3:'संतुष्ट ग्राहक', stat4:'ग्राहक संतुष्टि',
+    /* Section labels & titles */
+    lblAbout:'मेरे बारे में', titleAbout:'विश्वसनीय अधिवक्ता,',
+    lblPractice:'सेवा क्षेत्र', titlePractice:'कानूनी सेवाएँ',
+    lblWhy:'मुझे क्यों चुनें?', titleWhy:'मेरी विशेषज्ञता',
+    lblExperience:'करियर का सफर', titleExperience:'उत्कृष्टता के वर्ष',
+    lblCases:'सफलता की कहानियाँ', titleCases:'न्याय दिलाने वाले मामले',
+    lblTestimonials:'प्रशंसापत्र', titleTestimonials:'ग्राहक क्या कहते हैं',
+    lblAwards:'पुरस्कार', titleAwards:'सम्मान और मान्यता',
+    lblGallery:'गैलरी', titleGallery:'कानूनी सफर की तस्वीरें',
+    lblProcess:'प्रक्रिया', titleProcess:'परामर्श की प्रक्रिया',
+    lblBlog:'ब्लॉग', titleBlog:'लेख और जानकारी',
+    lblFAQ:'सामान्य प्रश्न', titleFAQ:'आपके सवालों के जवाब',
+    lblBooking:'अपॉइंटमेंट बुक करें', titleBooking:'परामर्श के लिए समय तय करें',
+    lblContact:'संपर्क', titleContact:'हमसे संपर्क करें',
+    /* About */
+    aboutP1:'बॉम्बे हाईकोर्ट में १५+ वर्षों के समर्पित अभ्यास के साथ, मैंने सत्यनिष्ठा, परिश्रम और नैतिकता के साथ न्याय दिलाने की प्रतिष्ठा बनाई है।',
+    aboutP2:'मेरा अभ्यास आपराधिक बचाव, नागरिक मुकदमेबाजी, पारिवारिक कानून, कॉर्पोरेट सलाह और रियल एस्टेट मामलों में है — हमेशा ग्राहक के हित को सर्वोपरि रखते हुए।',
+    /* Process steps */
+    proc1:'अपॉइंटमेंट बुक करें', proc2:'मामले पर चर्चा', proc3:'कानूनी रणनीति', proc4:'सक्रिय प्रतिनिधित्व', proc5:'समाधान',
+    /* FAQ */
+    faq1q:'परामर्श शुल्क क्या है?',
+    faq1a:'३० मिनट के प्रारंभिक परामर्श का शुल्क ₹१,५०० है। बाद की बैठकों और मामले की फीस पहले ही पारदर्शी रूप से बताई जाती है।',
+    faq2q:'मामला सुलझने में कितना समय लगता है?',
+    faq2a:'अवधि मामले के प्रकार पर निर्भर करती है। एक सीधा नागरिक मामला ६-१८ महीनों में सुलझ सकता है, जबकि उच्च न्यायालय स्तर के जटिल मामलों में २-५ साल लग सकते हैं।',
+    faq3q:'क्या आप मुंबई के बाहर के मामले लेते हैं?',
+    faq3a:'हाँ। यद्यपि बॉम्बे हाईकोर्ट हमारा प्राथमिक न्यायालय है, हम पूरे महाराष्ट्र और भारत में मामले संभालते हैं।',
+    faq4q:'क्या मेरी जानकारी गोपनीय रखी जाती है?',
+    faq4a:'बिल्कुल। वकील-मुवक्किल विशेषाधिकार पवित्र है। आपके द्वारा साझा की गई सभी जानकारी पूरी तरह से गोपनीय रखी जाती है।',
+    faq5q:'क्या मुझे मुफ्त प्रारंभिक मूल्यांकन मिल सकता है?',
+    faq5a:'हाँ, पूर्ण सशुल्क परामर्श बुक करने से पहले हम १० मिनट का मुफ्त फोन मूल्यांकन प्रदान करते हैं।',
+    /* Contact */
+    ctaCall:'कॉल करें', ctaWhatsApp:'व्हाट्सएप', ctaEmail:'ईमेल करें',
+    /* Booking */
+    bookSubtitle:'आज ही अपना परामर्श बुक करें। फॉर्म भरें और हम २ घंटे के भीतर पुष्टि करेंगे।',
+    bookSubmit:'परामर्श बुक करें',
   }
 };
 
@@ -202,14 +253,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ── Language Switcher ────────────────────────────────────── */
+  const langs = ['en', 'mr', 'hi'];
+  const langLabels = { en: 'मराठी', mr: 'हिंदी', hi: 'English' };
+  
   const langBtn = document.querySelector('.lang-btn');
   applyTranslations(currentLang);
   if (langBtn) {
-    langBtn.textContent = currentLang === 'en' ? 'मराठी' : 'English';
+    langBtn.textContent = langLabels[currentLang] || 'मराठी';
     langBtn.addEventListener('click', () => {
-      currentLang = currentLang === 'en' ? 'mr' : 'en';
+      let nextIdx = (langs.indexOf(currentLang) + 1) % langs.length;
+      currentLang = langs[nextIdx];
       localStorage.setItem('lang', currentLang);
-      langBtn.textContent = currentLang === 'en' ? 'मराठी' : 'English';
+      langBtn.textContent = langLabels[currentLang];
       applyTranslations(currentLang);
     });
   }
