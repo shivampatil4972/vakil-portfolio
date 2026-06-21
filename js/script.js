@@ -466,6 +466,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fetch('https://api.web3forms.com/submit', {
       method: 'POST',
+      headers: {
+        'Accept': 'application/json'
+      },
       body: formData
     })
     .then(response => response.json())
