@@ -15,7 +15,7 @@ const translations = {
     navCTA:'Book Consultation',
     /* Hero */
     heroLabel:'Available for New Cases',
-    heroName:'Adv. Ashwanith Chelekar',
+    heroName:'Adv.Ashwanith Chelekar(Nana)',
     heroDesig:'Senior Advocate | Bombay High Court',
     heroTagline:'Justice Delivered with Integrity & Expertise',
     heroDesc:'With 15+ years of distinguished legal practice, I provide strategic, compassionate, and result-oriented legal representation across civil, criminal, and corporate matters.',
@@ -66,7 +66,7 @@ const translations = {
     navCTA:'सल्लामसलत बुक करा',
     /* Hero */
     heroLabel:'नवीन प्रकरणांसाठी उपलब्ध',
-    heroName:'अॅड. राजेश शर्मा',
+    heroName:'अॅड. अश्वनीथ चेलेकर (नाना)',
     heroDesig:'वरिष्ठ अधिवक्ता | मुंबई उच्च न्यायालय',
     heroTagline:'प्रामाणिकता व कौशल्याने न्याय',
     heroDesc:'१५+ वर्षांच्या कायदेशीर सरावाने मी नागरी, फौजदारी व कॉर्पोरेट प्रकरणांमध्ये धोरणात्मक आणि परिणाम-केंद्रित कायदेशीर सेवा देतो.',
@@ -117,7 +117,7 @@ const translations = {
     navCTA:'परामर्श बुक करें',
     /* Hero */
     heroLabel:'नए मामलों के लिए उपलब्ध',
-    heroName:'अधिवक्ता अश्वनीथ चेलेकर',
+    heroName:'अधिवक्ता अश्वनीथ चेलेकर (नाना)',
     heroDesig:'वरिष्ठ अधिवक्ता | बॉम्बे हाईकोर्ट',
     heroTagline:'सत्यनिष्ठा और विशेषज्ञता के साथ न्याय',
     heroDesc:'१५+ वर्षों के कानूनी अनुभव के साथ, मैं नागरिक, आपराधिक और कॉर्पोरेट मामलों में रणनीतिक और परिणाम-उन्मुख कानूनी प्रतिनिधित्व प्रदान करता हूँ।',
