@@ -405,14 +405,9 @@ document.addEventListener('DOMContentLoaded', () => {
     chatWidget && chatWidget.classList.toggle('open');
   });
 
-  const chatResponses = {
-    'fees'       : 'Initial consultation fees start at ₹500. Complex matters are discussed during the first meeting. We offer transparent pricing with no hidden charges.',
-    'appointment': 'You can book an appointment by filling out the form below, calling +91 98765 43210, or clicking the WhatsApp button on this page.',
-    'documents'  : 'Required documents vary by case type. Common documents include ID proof, relevant agreements, court notices, and previous legal communications.',
-    'online'     : 'Yes! We offer online video consultations via Zoom or Google Meet for clients unable to visit the office.',
-    'timeline'   : 'Case timelines depend on complexity and court schedule. Simple matters may resolve in 2–3 months; complex cases may take 1–3 years.',
-    'default'    : 'Thank you for your question! Please call +91 98765 43210 or use the contact form for detailed assistance.',
-  };
+  /* ── Interactive Chatbot Intake ────────────────────────────────── */
+  let chatState = 0;
+  let intakeData = { name: '', category: '', details: '' };
 
   function addChatMessage(text, isUser = false) {
     const div = document.createElement('div');
@@ -422,14 +417,50 @@ document.addEventListener('DOMContentLoaded', () => {
     chatBody && (chatBody.scrollTop = chatBody.scrollHeight);
   }
 
-  function getChatResponse(msg) {
-    const m = msg.toLowerCase();
-    if (m.includes('fee') || m.includes('cost') || m.includes('charge') || m.includes('price')) return chatResponses.fees;
-    if (m.includes('appoint') || m.includes('book') || m.includes('schedule')) return chatResponses.appointment;
-    if (m.includes('document') || m.includes('paper') || m.includes('bring')) return chatResponses.documents;
-    if (m.includes('online') || m.includes('virtual') || m.includes('video')) return chatResponses.online;
-    if (m.includes('time') || m.includes('how long') || m.includes('duration')) return chatResponses.timeline;
-    return chatResponses.default;
+  async function sendIntakeToEmail() {
+    try {
+      const fd = new FormData();
+      fd.append('name', intakeData.name);
+      fd.append('email', 'chatbot@intake.system');
+      fd.append('subject', `New AI Intake: ${intakeData.category}`);
+      fd.append('message', `Name: ${intakeData.name}\nCategory: ${intakeData.category}\nDetails: ${intakeData.details}`);
+
+      const mainForm = document.getElementById('booking-form');
+      if (mainForm) {
+        const keyInput = mainForm.querySelector('input[name="access_key"]');
+        if (keyInput) {
+          fd.append('access_key', keyInput.value);
+          await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd });
+        }
+      }
+    } catch(err) { console.error(err); }
+  }
+
+  function handleChatIntake(msg) {
+    if (chatState === 0) {
+      if (msg.toLowerCase().includes('book') || msg.toLowerCase().includes('consult') || msg.toLowerCase().includes('case')) {
+        chatState = 1;
+        return "I can help you schedule a consultation. May I have your full name?";
+      } else {
+        chatState = 1; // Assume they want to ask a question or book anyway
+        return "Hello! I am Adv. Ashwanith's AI Assistant. I can help you book a consultation. What is your full name?";
+      }
+    } else if (chatState === 1) {
+      intakeData.name = msg;
+      chatState = 2;
+      return `Thank you, ${msg.split(' ')[0]}. Is your case related to Civil, Criminal, Corporate, or Family Law?`;
+    } else if (chatState === 2) {
+      intakeData.category = msg;
+      chatState = 3;
+      return "Understood. Please briefly describe the situation so the Advocate can review it.";
+    } else if (chatState === 3) {
+      intakeData.details = msg;
+      chatState = 4;
+      sendIntakeToEmail();
+      return "Thank you! I have sent these details directly to Adv. Ashwanith's inbox. Our team will contact you shortly.";
+    } else {
+      return "Your intake has already been submitted. Please wait for our team to contact you. Thank you!";
+    }
   }
 
   function handleChatSend() {
@@ -437,7 +468,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!msg) return;
     addChatMessage(msg, true);
     chatInput.value = '';
-    setTimeout(() => addChatMessage(getChatResponse(msg), false), 800);
+    
+    chatInput.disabled = true;
+    setTimeout(() => {
+      addChatMessage(handleChatIntake(msg), false);
+      chatInput.disabled = false;
+      chatInput.focus();
+    }, 1000);
   }
 
   chatSend && chatSend.addEventListener('click', handleChatSend);
@@ -447,7 +484,24 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => {
       const q = btn.dataset.q;
       addChatMessage(q, true);
-      setTimeout(() => addChatMessage(getChatResponse(q), false), 800);
+      chatInput.disabled = true;
+      setTimeout(() => {
+        addChatMessage(handleChatIntake(q), false);
+        chatInput.disabled = false;
+      }, 1000);
+    });
+  });
+
+  /* ── Magnetic Buttons ────────────────────────────────────────── */
+  document.querySelectorAll('.magnetic').forEach(btn => {
+    btn.addEventListener('mousemove', e => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+    });
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = `translate(0px, 0px)`;
     });
   });
 
