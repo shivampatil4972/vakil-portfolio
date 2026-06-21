@@ -1115,7 +1115,7 @@ textarea.form-control { resize: vertical; min-height: 100px; }
 .chat-toggle-btn:hover { transform: scale(1.1); background: var(--primary-light); }
 .chat-widget {
   position: fixed; bottom: 160px; left: 28px; z-index: 8887;
-  width: 340px; max-height: 480px;
+  width: 340px; max-height: calc(100vh - 260px);
   background: var(--bg-card); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1.5px solid var(--border);
   border-radius: var(--radius-xl); box-shadow: var(--shadow-xl);
   display: flex; flex-direction: column; overflow: hidden;
